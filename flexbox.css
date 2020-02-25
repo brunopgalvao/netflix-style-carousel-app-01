@@ -13,54 +13,16 @@ h1 {
     text-align: center;
 }
 
-.wrapper {
-    display: flex;
-    width: 100vw;
-    overflow: hidden;
+.cards {
+    display: flex; 
+    align-items: center;
     overflow-x: scroll;
-    overflow-y: hidden;
     scroll-behavior: smooth;
 }
 
-.wrapper section {
+.cards section {
+    display: flex;
     margin: 20px 0;
-    position: relative;
-    width: 100%;
-}
-
-.wrapper section .item {
-    padding: 0 2px;
-    transition: 250ms all;
-  }
-
-.wrapper section .item:hover {
-    margin: 0 40px;
-    transform: scale(1.2);
-}
-
-.wrapper a {
-    position: absolute;
-    color: #fff;
-    text-decoration: none;
-    font-size: 96px;
-    width: 80px;
-    padding: 20px;
-    text-align: center;
-    z-index: 1;
-}
-
-.wrapper a:nth-of-type(1) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
-  }
-
-.wrapper a:nth-of-type(2) {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 }
 
 #section1 {
@@ -69,14 +31,52 @@ h1 {
 
 #section2 {
     display: flex;
+    width: 100%;
 }
 
 #section3 {
     display: flex;
 }
 
+.card {
+    padding: 0 2px;
+    transition: 250ms all;
+}
+
+.card:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+}
+
+.cards .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 240px;
+    color: #fff;
+    font-size: 96px;
+    width: 80px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.arrow.back {
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+
+.arrow.forward {
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.arrow.back.hide {
+    display: none;
+}
+
 @media only screen and (max-width: 500px) {
-    a.arrow__btn {
+    .arrow {
       display: none;
     }
 }
