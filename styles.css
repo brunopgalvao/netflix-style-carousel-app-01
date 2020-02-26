@@ -30,9 +30,3 @@ h1 {
   margin: 0 40px;
   transform: scale(1.2);
 }
-
-@media only screen and (max-width: 500px) {
-  .arrow {
-    display: none;
-  }
-}
